@@ -1,0 +1,126 @@
+.welcome_box {
+    position: relative;
+    display: flex;
+    /* float: left; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 175px;
+    margin-bottom: 500px;
+}
+
+.first {
+    /* position: relative; */
+    position: absolute;
+    /* float: left; */
+    /* margin-top: -2%; */
+    /* margin-left: 17%; */
+    /* top: 100px; */
+    /* margin: 0 auto; */
+    width: 900px;
+    height: 400px;
+    background-image: url("../images/paidaxin.jpg");
+    background-size: cover;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* overflow-x: hidden; */
+}
+
+.second,
+.third,
+.fourth,
+.fifth {
+    position: absolute;
+    width: 900px;
+    height: 400px;
+    /* 设置阴影 */
+    filter: drop-shadow(4px 4px 12px rgba(0, 0, 0, .5));
+    background-size: cover;
+    opacity: .7;
+    transition: .5s;
+}
+
+.second::after,
+.third::after,
+.fourth::after,
+.fifth::after {
+    content: "";
+    position: absolute;
+    width: 1000px;
+    height: 600px;
+    background-image: url("../images/paidaxin.jpg");
+}
+
+.second {
+    /* top: 20px; */
+    left: -300px;
+    transform: rotateZ(100deg);
+    overflow: hidden;
+}
+
+.second::after {
+    transform: rotateZ(-100deg);
+}
+
+.third {
+    left: -300px;
+    transform: rotateZ(-100deg);
+    overflow: hidden;
+}
+
+.third::after {
+    transform: rotateZ(100deg);
+}
+
+.fourth {
+    right: -300px;
+    transform: rotateZ(105deg);
+    overflow: hidden;
+}
+
+.fourth::after {
+    transform: rotateZ(-105deg);
+}
+
+.fifth {
+    right: -300px;
+    transform: rotateZ(-100deg);
+    overflow: hidden;
+}
+
+.fifth::after {
+    transform: rotateZ(100deg);
+}
+
+.typeface {
+    opacity: 0;
+    font: 900 80px '';
+    /* 设置字体间距 */
+    letter-spacing: 20px;
+    /* margin-top: 90px; */
+    color: rgb(60, 60, 70);
+    transition: .5s;
+}
+
+/* 设置动画 */
+.first:hover .second {
+    left: -550px;
+}
+
+.first:hover .third {
+    left: -600px;
+}
+
+.first:hover .fourth {
+    right: -550px;
+}
+
+.first:hover .fifth {
+    right: -610px;
+}
+
+.first:hover .typeface {
+    opacity: 1;
+}

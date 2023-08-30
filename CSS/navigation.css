@@ -1,0 +1,108 @@
+.wrapper {
+    /* 固定定位 窗口滚动也不会移动 */
+    /* 一直位于底部 */
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    /* 渐变背景 */
+    /* background: linear-gradient(200deg, #ec77ab, #7873f5); */
+    background: url(../images/paidaxin.jpg) no-repeat;
+    background-size: cover;
+    /* 将元素剪切为一个圆形【25px表示圆的直径】【calc(100% - 45px) 45px表示圆心】 */
+    clip-path: circle(0px at calc(100% - 45px) 618px);
+    /* 过渡动画 */
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.menu-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 3;
+    /* 渐变背景 */
+    background: linear-gradient(200deg, #ec77ab, #7873f5);
+    /* background: url(../images/beijing2.jpg) no-repeat; */
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    color: rgb(20, 20, 20);
+    font-size: 20px;
+    cursor: pointer;
+    /* 这里也加个过渡动画 */
+    transition: all 0.3s ease;
+    /* z-index: 3; */
+}
+
+/* 把复选框隐藏 */
+#menu_btn {
+    display: none;
+}
+
+#menu_btn:checked~.wrapper {
+    /* 将元素剪切为一个圆形 75%表示圆的直径 */
+    clip-path: circle(75%);
+}
+
+#menu_btn:checked~.menu-btn {
+    color: #d576ba;
+    /* background: #fff; */
+
+}
+
+/* 当复选框为选中态时，改变图标 */
+#menu_btn:checked~.menu-btn i::before {
+    content: "\f00d";
+}
+
+.wrapper ul {
+    position: absolute;
+    /* display: flex;
+    position: relative; */
+    top: 40%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    /* z-index: 20; */
+}
+
+.wrapper ul li {
+    margin: 30px 0px;
+}
+
+.wrapper ul li a {
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 50px;
+    /* position: relative; */
+    line-height: 50px;
+}
+
+.wrapper ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: rgb(17, 17, 17);
+    z-index: -1;
+    border-radius: 50px;
+    left: 0px;
+    transform: scaleY(0);
+    /* 加个动画过渡 */
+    transition: transform 0.3s ease;
+}
+
+.wrapper ul li a:hover::after {
+    transform: scaleY(1);
+}
+
+.wrapper ul li a:hover {
+    color: #d576ba;
+}

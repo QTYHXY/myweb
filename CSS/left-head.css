@@ -1,0 +1,55 @@
+/* 标题栏 */
+.btn-box {
+    /* width: 100%; */
+    /* 弹性布局 */
+    display: flex;
+    /* 横向排列 flex-direction: row; */
+    /* 允许换行 */
+    /* position: absolute; */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    /* 平均分配宽度 */
+    /* justify-content: space-around; */
+    /* margin-right: 60px; */
+    padding-left: 10px;
+}
+
+.btn-box .btn {
+    /* 相对定位 */
+    position: relative;
+    /* position: absolute; */
+    /* justify-content: space-around; */
+    width: 90px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #edf0f1;
+    /* border: 2px solid #00adff; */
+    border-radius: 30px;
+    font-size: 15px;
+    /* margin-left: 2px; */
+    margin-top: 25px;
+    /* 字间距 */
+    letter-spacing: 4px;
+    cursor: pointer;
+    /* 溢出隐藏 */
+    overflow: hidden;
+}
+
+.btn-box .btn a {
+    color: rgb(235, 230, 230);
+    text-decoration: none;
+}
+
+
+
+
+.btn-box .btn span svg {
+    position: absolute;
+    display: block;
+    float: left;
+    margin-top: 12px;
+    /* margin-right: -auto; */
+    margin-left: 2px;
+
+}

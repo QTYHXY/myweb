@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>加载中</title>
+    <link rel="stylesheet" href="../CSS/loading.css">
+</head>
+
+<body>
+    <div class="loading-box">
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="shadow"></div>
+    </div>
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState == "complete") {
+                loadingFade();
+            }
+        }
+        function loadingFade() {
+            var opacity = 1;
+
+            var loadingBackground = document.getElementsByClassName("loading-box")
+            var time = setInterval(function () {
+                if (opacity <= 0) {
+                    clearInterval(time);
+                    $('loading').remove();
+                }
+                loadingBackground.style.opacity = opacity;
+                opacity -= 0.4;
+            }, 100);
+        }
+    </script>
+</body>
+
+</html>

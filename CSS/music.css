@@ -1,0 +1,30 @@
+.music {
+    position: absolute;
+    /* z-index: 999; */
+    margin-top: 45%;
+    margin-left: 10px;
+    /* justify-content: flex-end; */
+    font-family: sans-serif;
+    /* background-color: pink; */
+    /* 一直位于底部 */
+    position: fixed;
+    left: 10px;
+    top: -20px;
+}
+
+.right-col {
+    display: flex;
+    align-items: center;
+}
+
+.right-col p {
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    align-items: center;
+}
+
+#icon {
+    width: 50px;
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+@import url("https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+#plane {
+    color: #fff;
+    font-size: 30px;
+    /* 绝对定位 */
+    position: absolute;
+    /* 弹性布局 水平+ 垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}

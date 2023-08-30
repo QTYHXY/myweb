@@ -1,0 +1,37 @@
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+a {
+    color: rgba(16, 16, 16, 0.842);
+    /* 下划线消失 */
+    text-decoration: none;
+    color: white;
+}
+
+.box-back {
+    position: absolute;
+    color: white;
+    z-index: 99;
+}
+
+.back {
+    background-color: rgba(0, 0, 0, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin: 0 10px;
+    font-size: 150%;
+    /* 鼠标放上变小手 */
+    cursor: pointer;
+}
+
+audio {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+}

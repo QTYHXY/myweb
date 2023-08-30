@@ -1,0 +1,20 @@
+.head-box {
+    position: relative;
+    display: flex;
+    /* float: left; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.head {
+    /* position: relative; */
+    width: 1350px;
+    height: 100px;
+}
+
+.head .logo {
+    float: left;
+    margin-top: 20px;
+    /* margin-left: 40px; */
+}

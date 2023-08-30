@@ -1,0 +1,107 @@
+.self-box {
+    display: flex;
+    /* float: left; */
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 1000px; */
+    /* padding: 450px; */
+}
+
+
+.self {
+    position: absolute;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* margin-left: 150px; */
+    margin-top: 500px;
+    /* background-color: rgb(17, 17, 160); */
+    /* background-image: url(../images/autumn.jpg); */
+    /*background-repeat: no-repeat;
+    background-size: cover; */
+    overflow-x: hidden;
+}
+
+.shell {
+    position: relative;
+    /* min-width: 500px; */
+    max-width: 1350px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* 设置3d变化 */
+    transform-style: preserve-3d;
+    /* 添加透视效果 */
+    perspective: 900px;
+}
+
+.shell .box-self {
+    position: relative;
+    width: 150px;
+    height: 165px;
+    transition: 0.3s;
+    overflow: hidden;
+    margin: 30px;
+    transform: rotateY(0deg);
+    transition-delay: .1s;
+    border-radius: 5px;
+    /* border: #fff 5px solid; */
+}
+
+/* 当鼠标所有卡片的父元素点shell上时，
+所有卡片像Y轴翻转20度 */
+.shell:hover .box-self {
+    transform: rotateY(20deg);
+}
+
+/* 当鼠标悬浮在当前卡片上时，当前卡片的翻转角度为0，
+并放大一点二五倍，加个阴影 */
+.shell .box-self:hover {
+    transform: rotateY(0deg) scale(1.25);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+/* 当鼠标悬浮在卡片上时，
+当前卡片后面的所有卡片全部都反向翻转负20度 */
+.shell .box-self:hover~.box-self {
+    transform: rotateY(-20deg);
+}
+
+.shell .box-self .images img {
+    width: 100%;
+}
+
+.shell .box-self .content-self {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    z-index: 999;
+    padding: 0px;
+}
+
+.shell .box-self .content-self h2 {
+    color: rgb(210, 140, 140);
+    transition: 0.3s;
+    font-size: 10px;
+    transform: translateY(-20px);
+}
+
+.shell .box-self:hover .content-self h2 {
+    transform: translateY(-0px);
+}
+
+.shell .box-self .content-self p {
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+    font-size: 14px;
+    transform: translateY(200px);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.shell .box-self:hover .content-self p {
+    transform: translateY(133px);
+}

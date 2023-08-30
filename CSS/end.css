@@ -1,0 +1,24 @@
+.end {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1150px;
+}
+
+.end .connext {
+    position: relative;
+}
+
+.end .connext-1 {
+    float: left;
+    margin-left: 15px;
+}
+
+.end .warn {
+
+    position: absolute;
+    text-align: center;
+    margin-top: 100px;
+    float: left;
+}
